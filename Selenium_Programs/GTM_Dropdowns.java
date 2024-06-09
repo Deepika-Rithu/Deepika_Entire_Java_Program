@@ -14,6 +14,7 @@ public class GTM_Dropdowns
 		driver.get("https://www.grotechminds.com/dropdown/");
 		driver.manage().window().maximize();
 		
+		
 		WebElement dropdown1=driver.findElement(By.id("Choice1"));
 		Select s1=new Select(dropdown1);
 		s1.selectByVisibleText("Demo2");

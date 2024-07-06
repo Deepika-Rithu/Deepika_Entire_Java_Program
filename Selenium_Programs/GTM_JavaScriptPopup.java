@@ -14,13 +14,6 @@ public class GTM_JavaScriptPopup
 		driver.get("https://www.grotechminds.com/javascript-popup/");
 		WebElement click_button=driver.findElement(By.xpath("//button[@class='btnjs']"));
 		click_button.click();
-		
-		
-		
-		
-		
-		
-		
 		driver.switchTo().alert().accept();
 
 	}

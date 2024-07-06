@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite_NineAnnotations">
+  <test thread-count="5" name="Test_NineAnnotations">
+    <classes>
+      <class name="SeleniumProgram.ExecutionOfAllNineAnnotations_WithThreeTestcases"/>
+    </classes>
+  </test> <!-- Test_NineAnnotations -->
+</suite> <!-- Suite_NineAnnotations -->

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelSuite" parallel="tests">
+  <test thread-count="5" name="ParallelTest_Chrome">
+	<parameter name="browser" value="Chrome"></parameter>
+    <classes>
+      <class name="AmazonScenarios_ParallelTesting.Scenario1"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario2"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario3"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario4"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario5"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario6"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario7"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario8"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario9"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario10"/>
+    </classes>
+  </test> <!-- ParallelTest -->
+  
+   <test thread-count="5" name="ParallelTest_Edge">
+	<parameter name="browser" value="Edge"></parameter>
+    <classes>
+      <class name="AmazonScenarios_ParallelTesting.Scenario1"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario2"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario3"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario4"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario5"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario6"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario7"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario8"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario9"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario10"/>
+    </classes>
+  </test> <!-- ParallelTest -->
+  
+   <test thread-count="5" name="ParallelTest_Firefox">
+	<parameter name="browser" value="Firefox"></parameter>
+    <classes>
+      <class name="AmazonScenarios_ParallelTesting.Scenario1"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario2"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario3"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario4"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario5"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario6"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario7"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario8"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario9"/>
+      <class name="AmazonScenarios_ParallelTesting.Scenario10"/>
+    </classes>
+  </test> <!-- ParallelTest -->
+  
+</suite> <!-- ParallelSuite -->

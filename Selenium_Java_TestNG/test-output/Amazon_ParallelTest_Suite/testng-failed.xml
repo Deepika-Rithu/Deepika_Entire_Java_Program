@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Amazon_ParallelTest_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AmazonParallelTest_Firefox(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="Amazon_2TC_1AM_1BM.Testcase1">
+        <methods>
+          <include name="login"/>
+          <include name="Search_ClickFirstProduct"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- Amazon_2TC_1AM_1BM.Testcase1 -->
+      <class name="Amazon_2TC_1AM_1BM.Testcase2">
+        <methods>
+          <include name="login"/>
+          <include name="Search_ClickFirstProduct_Wishlist_Cart"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- Amazon_2TC_1AM_1BM.Testcase2 -->
+    </classes>
+  </test> <!-- AmazonParallelTest_Firefox(failed) -->
+</suite> <!-- Failed suite [Amazon_ParallelTest_Suite] -->

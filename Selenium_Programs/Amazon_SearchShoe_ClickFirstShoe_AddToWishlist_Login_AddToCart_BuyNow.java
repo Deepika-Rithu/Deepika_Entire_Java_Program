@@ -23,6 +23,7 @@ public class Amazon_SearchShoe_ClickFirstShoe_AddToWishlist_Login_AddToCart_BuyN
 		Set<String> s1=driver.getWindowHandles();
 		System.out.println(s1);
 		Iterator<String> pcid=s1.iterator();
+		
 		String parentid=pcid.next();
 		String childid=pcid.next();
 		System.out.println(parentid);

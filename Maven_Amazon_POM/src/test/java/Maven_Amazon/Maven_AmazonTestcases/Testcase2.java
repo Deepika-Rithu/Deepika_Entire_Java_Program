@@ -1,23 +1,25 @@
 package Maven_Amazon.Maven_AmazonTestcases;
 
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.Set;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import Listeners_ForScreenshot.Listeners_Screenshot;
 import Maven_Amazon.Maven_Amazon.Amazon_Home_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_Login_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_SearchResult_Page;
-
-public class Testcase2 
+@Listeners(Listeners_Screenshot.class) 
+public class Testcase2 extends Listeners_Screenshot
 {
 	@Test
-	public void Login_Search_ClickFirstProduct()
+	public void Login_Search_ClickFirstProduct() throws InterruptedException
 	{
-		WebDriver driver=new ChromeDriver();
+		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
@@ -31,6 +33,11 @@ public class Testcase2
 		Amazon_SearchResult_Page a3=new  Amazon_SearchResult_Page(driver);
 		a3.firstproduct_click();
 		Set<String> s1=driver.getWindowHandles();
+		Iterator<String> pcid=s1.iterator();
+		pcid.next();
+		String childid=pcid.next();
+		driver.switchTo().window(childid);
+		Thread.sleep(2000);
 		int count=s1.size();
 		System.out.println(count);
 		Assert.assertEquals(count==2, true, "First product was not selected");

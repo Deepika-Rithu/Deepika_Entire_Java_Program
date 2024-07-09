@@ -4,23 +4,25 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import Listeners_ForScreenshot.Listeners_Screenshot;
 import Maven_Amazon.Maven_Amazon.Amazon_AddToWishlist_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_Home_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_Login_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_Product_Page;
 import Maven_Amazon.Maven_Amazon.Amazon_SearchResult_Page;
 
-public class Testcase4 
+@Listeners(Listeners_Screenshot.class) 
+public class Testcase4 extends Listeners_Screenshot
 {
 	@Test
 	public void Login_Search_ClickFirstProduct_AddToWishlist_AddToCart() throws InterruptedException
 	{
-		WebDriver driver=new ChromeDriver();
+		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
@@ -49,7 +51,7 @@ public class Testcase4
 		a5.continue_shopping();
 		Thread.sleep(2000);
 		a4.add_to_cart();
-		Assert.assertEquals(driver.getTitle(), "Amazon.in Shopping Cart","Product added to cart");
+		Assert.assertEquals(driver.getTitle(), "Amazon.in Shopping Cart","Product not added to cart");
 	
 	}
 }

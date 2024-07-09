@@ -1,11 +1,10 @@
-package Maven_Amazon.Maven_AmazonTestcases;
+package Listeners_ForScreenshot;
 
 import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
@@ -13,9 +12,9 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class TestListeners implements ITestListener
+public class Listeners_Screenshot implements ITestListener
 {
-WebDriver driver;
+public static ChromeDriver driver;
 	@Override
 	public void onTestStart(ITestResult result) {                                                                                                                                                                                  
 		// TODO Auto-generated method stub
@@ -24,11 +23,12 @@ WebDriver driver;
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+	
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestSuccess(result);
 		Reporter.log("Testcase Passed");
-		TakesScreenshot a1=(TakesScreenshot) driver;
-		File source=a1.getScreenshotAs(OutputType.FILE);
+		TakesScreenshot a1=driver;
+		File source= a1.getScreenshotAs(OutputType.FILE);
 		File destination=new File("C:\\Users\\HP\\OneDrive\\Documents\\Deepika\\Core Java and Selenium\\Screenshots\\Pass\\"+"Pass"+Math.random()+".png");
 		try {
 			FileHandler.copy(source, destination);
@@ -43,7 +43,7 @@ WebDriver driver;
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		Reporter.log("Testcase Failed");
-		TakesScreenshot a1=(TakesScreenshot) driver;
+		TakesScreenshot a1=driver;
 		File source=a1.getScreenshotAs(OutputType.FILE);
 		File destination=new File("C:\\Users\\HP\\OneDrive\\Documents\\Deepika\\Core Java and Selenium\\Screenshots\\Fail\\"+"Fail"+Math.random()+".png");
 		try {
@@ -85,3 +85,4 @@ WebDriver driver;
 	}
 
 }
+

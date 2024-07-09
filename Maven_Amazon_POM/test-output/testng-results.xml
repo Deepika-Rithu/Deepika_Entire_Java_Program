@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Testcase Passed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-07-05T18:18:22 IST" name="Default suite" finished-at="2024-07-05T18:19:01 IST" duration-ms="39045">
+  <suite started-at="2024-07-09T16:50:27 IST" name="Default suite" finished-at="2024-07-09T16:50:51 IST" duration-ms="23551">
     <groups>
     </groups>
-    <test started-at="2024-07-05T18:18:22 IST" name="Default test" finished-at="2024-07-05T18:19:01 IST" duration-ms="39045">
-      <class name="Maven_Amazon.Maven_AmazonTestcases.Testcase5">
-        <test-method signature="Login_Search_ClickFirstProduct_AddToWishlist_AddToCart_SelectAddress()[pri:0, instance:Maven_Amazon.Maven_AmazonTestcases.Testcase5@56cdfb3b]" started-at="2024-07-05T18:18:22 IST" name="Login_Search_ClickFirstProduct_AddToWishlist_AddToCart_SelectAddress" finished-at="2024-07-05T18:19:01 IST" duration-ms="38986" status="PASS">
+    <test started-at="2024-07-09T16:50:27 IST" name="Default test" finished-at="2024-07-09T16:50:51 IST" duration-ms="23551">
+      <class name="Maven_Amazon.Maven_AmazonTestcases.Testcase2">
+        <test-method signature="Login_Search_ClickFirstProduct()[pri:0, instance:Maven_Amazon.Maven_AmazonTestcases.Testcase2@a530d0a]" started-at="2024-07-09T16:50:27 IST" name="Login_Search_ClickFirstProduct" finished-at="2024-07-09T16:50:48 IST" duration-ms="20449" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Testcase Passed]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- Login_Search_ClickFirstProduct_AddToWishlist_AddToCart_SelectAddress -->
-      </class> <!-- Maven_Amazon.Maven_AmazonTestcases.Testcase5 -->
+        </test-method> <!-- Login_Search_ClickFirstProduct -->
+      </class> <!-- Maven_Amazon.Maven_AmazonTestcases.Testcase2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

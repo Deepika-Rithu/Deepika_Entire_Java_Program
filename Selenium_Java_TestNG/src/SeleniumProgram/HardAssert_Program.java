@@ -13,8 +13,7 @@ import org.testng.asserts.Assertion;
 
 public class HardAssert_Program 
 {
-	@Test
-	public void HardAssert() throws InterruptedException
+	public static void main(String[] args)
 	{
 	ChromeDriver driver=new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -23,16 +22,15 @@ public class HardAssert_Program
 	WebElement search=driver.findElement(By.id("twotabsearchtextbox"));
 	search.sendKeys("camera");
 	search.sendKeys(Keys.ENTER);
-	WebElement camera_select=driver.findElement(By.xpath("(//a[@class='a-link-normal s-no-outline'])[15]"));
+	WebElement camera_select=driver.findElement(By.xpath("(//a[@class='a-link-normal s-no-outline'])[13]"));
 	camera_select.click();
 	Set<String> s1=driver.getWindowHandles();
 	Assertion a1=new Assertion(); //HardAssert
-	a1.assertEquals(s1.size(), 3);
+	a1.assertEquals(s1.size(), 2);
 	Iterator<String> pcid=s1.iterator();
 	pcid.next();
 	String childid=pcid.next();
 	driver.switchTo().window(childid);
-	Thread.sleep(2000);
 	WebElement addtocart= driver.findElement(By.id("add-to-cart-button"));
 	addtocart.click();
 	}

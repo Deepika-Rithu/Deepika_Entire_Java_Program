@@ -13,8 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 public class SoftAssert_Program
 {
-	@Test
-	public void SoftAssert() throws InterruptedException
+	public static void main(String[] args)
 	{
 	ChromeDriver driver=new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,7 +31,6 @@ public class SoftAssert_Program
 	pcid.next();
 	String childid=pcid.next();
 	driver.switchTo().window(childid);
-	Thread.sleep(2000);
 	WebElement addtocart= driver.findElement(By.id("add-to-cart-button"));
 	addtocart.click();
 	}
